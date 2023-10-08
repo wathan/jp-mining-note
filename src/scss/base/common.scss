@@ -99,7 +99,7 @@ $font-backup-sans:
   --pa-overline-downstep-padding: 3px;
   --pa-overline-thickness: 2px;
   --pa-overline-downstep-height: 0.4em;
-  --pa-overline-downstep-right-offset: 1px;
+  --pa-overline-downstep-right-offset: -1px;
 
 
   --dh-right-image-gap: 35px; /* is also used as a padding to the left for mobile */
@@ -384,7 +384,7 @@ $font-backup-sans:
     --pa-overline-height-above-text: -1px;
     --pa-overline-downstep-padding: 2px;
     --pa-overline-thickness: 1px;
-    --pa-overline-downstep-right-offset: 1px;
+    --pa-overline-downstep-right-offset: -1px;
 
     font-weight: normal;
     filter: opacity(30%);
