@@ -173,6 +173,24 @@ and must use `./install.py --update`.
 #### 0.12.0.0 Pre-release Changelog
 
 <details>
+<summary> Pre-release 13 </summary>
+
+- **Fixes**
+    - Updated the way pitch accent is styled to work with the latest version of AJTJapanese. Pronunciation is now styled with the following html span classes:
+        - `<span class="high">...</span>`: High pitch overline that doesn't drop
+        - `<span class="high_drop">...</span>`: High pitch overline that drops at the `</span>`
+        - `<span class="devoiced">...</span>`: Colors devoiced morae blue
+        - `<span class="nasal">..</span>`: Colors the nasal marker red
+
+    - Updated documentation
+
+    - Fixed the location of the build folder, and other minor dev tool tweaks
+</details>
+
+
+
+
+<details>
 <summary> Pre-release 12 </summary>
 
 - **Features**:
