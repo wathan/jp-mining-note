@@ -99,7 +99,7 @@ $font-backup-sans:
   --pa-overline-downstep-padding: 3px;
   --pa-overline-thickness: 2px;
   --pa-overline-downstep-height: 0.4em;
-  --pa-overline-downstep-left-offset: 1px;
+  --pa-overline-downstep-right-offset: 1px;
 
 
   --dh-right-image-gap: 35px; /* is also used as a padding to the left for mobile */
@@ -331,12 +331,7 @@ $font-backup-sans:
    */
 
   /* css classes used by the plugin */
-  .downstep {
-    color: var(--pa-overline-color);
-    position: relative;
-    margin-right: var(--pa-overline-downstep-padding);
-  }
-  .downstep:before {
+  .high_drop:after {
     content: "";
     width: var(--pa-overline-thickness);
     height: var(--pa-overline-downstep-height);
@@ -344,16 +339,18 @@ $font-backup-sans:
     position: absolute;
     display: block;
     top: var(--pa-overline-height-above-text);
-    left: var(--pa-overline-downstep-left-offset);
+    right: var(--pa-overline-downstep-right-offset);
   }
 
 
-  .pitchoverline {
+  .high_drop,
+  .high {
     text-decoration: none !important;
     text-decoration-color: var(--pa-overline-color) !important;
     position: relative;
   }
-  .pitchoverline:after {
+  .high_drop:before,
+  .high:before {
     content: '';
     // the subtraction is so the two rectangles don't overlap
     // (causes a visible chagnge in brightness when bolded / opacity filter is applied)
@@ -371,15 +368,11 @@ $font-backup-sans:
   }
 
 
-  .nopron {
+  .devoiced {
     color: var(--pa-no-pron-color);
   }
   .nasal {
     color: var(--pa-nasal-color);
-  }
-
-  .downstep .downstep-inner {
-    display: none;
   }
 
 }
@@ -391,7 +384,7 @@ $font-backup-sans:
     --pa-overline-height-above-text: -1px;
     --pa-overline-downstep-padding: 2px;
     --pa-overline-thickness: 1px;
-    --pa-overline-downstep-left-offset: 1px;
+    --pa-overline-downstep-right-offset: 1px;
 
     font-weight: normal;
     filter: opacity(30%);
