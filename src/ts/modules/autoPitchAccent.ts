@@ -894,33 +894,32 @@ export class AutoPitchAccent extends RunnableModule {
     const temp = document.createElement('div');
     temp.innerHTML = ajtWordHTML;
 
+    // Need to remove all ajt spans except nasal and devoiced
+    const classesToRemove = ['high', 'low', 'high_drop', 'low_rise'];
+
     // removes pitch accent overline and downstep
     for (const c of temp.childNodes) {
       if (
         c.nodeName === 'SPAN' &&
-        (c as HTMLSpanElement).classList.contains('pitchoverline')
+        (classesToRemove.some(className => (c as HTMLSpanElement).classList.contains(className)))
       ) {
         for (const child of c.childNodes) {
           flattened.appendChild(child.cloneNode(true));
         }
-      } else if (
-        c.nodeName === 'SPAN' &&
-        (c as HTMLSpanElement).classList.contains('downstep')
-      ) {
-        // skips
-      } else {
+      }
+      else {
         flattened.appendChild(c.cloneNode(true));
       }
     }
 
     // combines the devoiced character into one mora, if it can
     // (e.g. 神出鬼没 (しんしゅつきぼつ) only has the 2nd (し) devoiced, instead of (しゅ)
-    // シ<span class="pitchoverline">ン<span class="nopron">シ</span>ュツキボツ</span>
-    if (ajtWordHTML.includes('nopron')) {
+    // シ<span class="high">ン<span class="devoiced">シ</span>ュツキボツ</span>
+    if (ajtWordHTML.includes('devoiced')) {
       // crazy regex replace
       flattened.innerHTML = flattened.innerHTML.replace(
-        /<span class="nopron">(.)<\/span>([ぁぃぅぇぉゃゅょゎァィゥェォャュョヮ])/g,
-        '<span class="nopron">$1$2</span>'
+        /<span class="devoiced">(.)<\/span>([ぁぃぅぇぉゃゅょゎァィゥェォャュョヮ])/g,
+        '<span class="devoiced">$1$2</span>'
       );
     }
 
@@ -938,9 +937,9 @@ export class AutoPitchAccent extends RunnableModule {
           result[result.length - 1] + (c as HTMLSpanElement).outerHTML;
       } else if (
         c.nodeName === 'SPAN' &&
-        (c as HTMLSpanElement).classList.contains('nopron')
+        (c as HTMLSpanElement).classList.contains('devoiced')
       ) {
-        // assumption: this is the nopron span
+        // assumption: this is the devoiced span
         result.push((c as HTMLSpanElement).outerHTML);
       } else {
         throw Error(`Unexpected flattened.childNode: ${c}`);
@@ -1067,10 +1066,10 @@ export class AutoPitchAccent extends RunnableModule {
       return result[0];
     }
 
-    const startOverline = '<span class="pitchoverline">';
-    const stopOverline = `</span>`;
-    const downstep =
-      '<span class="downstep"><span class="downstep-inner">ꜜ</span></span>';
+    const startHighDrop = '<span class="high_drop">';
+    const startHigh = '<span class="high">';
+    const endSpan = `</span>`;
+
     let paGroup: PAGroup | null = null;
 
     if (kifukuList.includes(pos)) {
@@ -1079,22 +1078,22 @@ export class AutoPitchAccent extends RunnableModule {
         this.logger.warn('Cannot apply 起伏 on 1 mora word.');
       } else if (result.length == 2) {
         // equivalent to pos == 1
-        result.splice(1, 0, stopOverline + downstep); // downstep after first mora
-        result.splice(0, 0, startOverline); // overline starting at the very beginning
+        result.splice(1, 0, endSpan); // downstep after first mora
+        result.splice(0, 0, startHighDrop); // overline starting at the very beginning
       } else {
         // equivalent to pos == #moras-1
-        result.splice(-1, 0, stopOverline + downstep); // insert right before last index
-        result.splice(1, 0, startOverline); // insert at index 1
+        result.splice(-1, 0, endSpan); // insert right before last index
+        result.splice(1, 0, startHighDrop); // insert at index 1
       }
       paGroup = 'kifuku';
     } else if (pos === 0) {
-      result.splice(1, 0, startOverline); // insert at index 1
-      result.push(stopOverline);
+      result.splice(1, 0, startHigh); // insert at index 1
+      result.push(endSpan);
       paGroup = 'heiban';
     } else if (pos === 1) {
       // start overline starts at the very beginning
-      result.splice(pos, 0, stopOverline + downstep);
-      result.splice(0, 0, startOverline); // insert at the very beginning
+      result.splice(pos, 0, endSpan);
+      result.splice(0, 0, startHighDrop); // insert at the very beginning
       paGroup = 'atamadaka';
 
       // - ASSUMPTION: we categorize 1 mora long words with a downstep as 尾高,
@@ -1120,8 +1119,8 @@ export class AutoPitchAccent extends RunnableModule {
         );
       }
       // start overline starts over the 2nd mora
-      result.splice(pos, 0, stopOverline + downstep);
-      result.splice(1, 0, startOverline); // insert at index 1
+      result.splice(pos, 0, endSpan);
+      result.splice(1, 0, startHighDrop); // insert at index 1
 
       if (pos >= moraNum) {
         paGroup = 'odaka';
