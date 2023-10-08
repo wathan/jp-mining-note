@@ -1356,7 +1356,7 @@ code {
   b {
     --pa-overline-color: var(--text-color--1);
   }
-  .nopron {
+  .devoiced {
       color: var(--text-color--1);
   }
 }
@@ -1368,11 +1368,15 @@ code {
 
 .hover-tooltip__pitch-accent:not(.pa-word-highlight-pitch-overline) {
   /* cancels out extra colors */
-  .pitchoverline:after, .downstep:before {
+  .high_drop:after,
+  .high_drop:before,
+  .high:before {
     --pa-overline-color: var(--text-color--1);
   }
 
-  b .pitchoverline:after, b .downstep:before {
+  b .high_drop:after,
+  b .high_drop:before,
+  b .high:before {
     --pa-overline-color: var(--text-color--2);
   }
 }
@@ -1389,11 +1393,13 @@ code {
 
   .hover-tooltip__pitch-accent {
 
-    .pitchoverline:after, .downstep:before {
+    .high_drop:after,
+    .high_drop:before,
+    .high:before {
       --pa-overline-color: var(--text-color--1);
     }
 
-    .nopron {
+    .devoiced {
       color: var(--text-color--1);
     }
 
@@ -1409,18 +1415,22 @@ code {
     b {
       --pa-overline-color: var(--text-color);
     }
-    .nopron {
+    .devoiced {
         color: var(--text-color);
     }
   }
 
   .hover-tooltip__pitch-accent:not(.pa-word-highlight-pitch-overline) {
     /* cancels out extra colors */
-    .pitchoverline:after, .downstep:before {
+    .high_drop:after,
+    .high_drop:before,
+    .high:before {
       --pa-overline-color: var(--text-color);
     }
 
-    b .pitchoverline:after, b .downstep:before {
+    b .high_drop:after,
+    b .high_drop:before,
+    b .high:before {
       --pa-overline-color: var(--text-color--1);
     }
   }
@@ -1429,7 +1439,9 @@ code {
   /* this is repeated code so the above doesn't override the standard colors */
   .hover-tooltip__card--new {
     .hover-tooltip__pitch-accent {
-      .pitchoverline:after, .downstep:before {
+      .high_drop:after,
+      .high_drop:before,
+      .high:before {
         --pa-overline-color: var(--text-color--1);
       }
     }
