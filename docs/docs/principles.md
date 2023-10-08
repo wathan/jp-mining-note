@@ -25,6 +25,6 @@ and updated so you can use it to the best of your ability.
 
 # Free & Open Source
 Everything here, including the documentation itself, is completely free and open source,
-licensed under [MIT](https://github.com/Aquafina-water-bottle/jp-mining-note/blob/master/LICENSE).
+licensed under [MIT](https://github.com/arbyste/jp-mining-note/blob/master/LICENSE).
 Rest easy knowing you will keep full ownership of your note, forever.
 

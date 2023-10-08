@@ -24,6 +24,16 @@ You can update the note in one of two ways:
 
 1. Via **JPMN Manager**, an Anki add-on.
     *If you don't know which method to choose, choose this one*.
+
+    !!! Note
+
+        On this temporary bugfix fork of JPMN, you **cannot use JPMN Manager to
+        update the note.** This functionality will return when Aquafina resumes
+        maintenance of JPMN. See
+        [here](faq.md#why-cant-i-use-jpmn-manager-on-this-temporary-bugfix-fork)
+        for more details.
+
+
 2. Via **command line**.
     This method is recommended for people who are familiar with `git` and `python`,
     and don't want to download an Anki add-on.
@@ -41,6 +51,10 @@ Afterward seeing that page, please view the [final steps](updating.md#final-step
 
 ??? info "Option 1: Via JPMN Manager <small>(click here)</small>"
 
+    As noted above, on this temporary bugfix fork of JPMN, you cannot use
+    Option 1. Please use Option 2.
+
+<!--
     This add-on simply wraps around the python script mentioned below,
     and should behave the exact same as running the script manually.
 
@@ -68,17 +82,19 @@ Afterward seeing that page, please view the [final steps](updating.md#final-step
 {% endfilter %}
 
 
+-->
+
 ??? info "Option 2: Via Command Line <small>(click here)</small>"
 
     === "Windows"
         ```bat
         :: assuming you are at the root of the repo, i.e. after the following commands:
-        ::  $ git clone https://github.com/Aquafina-water-bottle/jp-mining-note.git
+        ::  $ git clone https://github.com/arbyste/jp-mining-note.git
         ::  $ cd jp-mining-note
 
         :: grabs the latest version of the master branch
-        :: NOTE: use the `testing` branch if you want to install pre-releases, i.e.
-        ::git checkout testing
+        :: NOTE: use the `dev` branch if you want to install pre-releases, i.e.
+        ::git checkout dev
         git pull --force
 
         :: Make sure you have Anki open and Anki-Connect installed!
@@ -90,12 +106,12 @@ Afterward seeing that page, please view the [final steps](updating.md#final-step
     === "Linux & macOS"
         ```bash
         # assuming you are at the root of the repo, i.e. after the following commands:
-        #  $ git clone https://github.com/Aquafina-water-bottle/jp-mining-note.git
+        #  $ git clone https://github.com/arbyste/jp-mining-note.git
         #  $ cd jp-mining-note
 
         # grabs the latest version of the master branch
-        # NOTE: use the `testing` branch if you want to install pre-releases, i.e.
-        #git checkout testing
+        # NOTE: use the `dev` branch if you want to install pre-releases, i.e.
+        #git checkout dev
         git pull --force
 
         # Make sure you have Anki open and Anki-Connect installed!
@@ -120,7 +136,7 @@ Afterward seeing that page, please view the [final steps](updating.md#final-step
 
     In short, updating via Anki or Python performs many operations that cannot be done with
     a simple note transfer. Most importantly, there are operations
-    (usually under [batch.py](https://github.com/Aquafina-water-bottle/jp-mining-note/blob/master/tools/batch.py))
+    (usually under [batch.py](https://github.com/arbyste/jp-mining-note/blob/master/tools/batch.py))
     that change the data within the actual fields themselves, and these are ran
     automatically on note update. If you attempt to update your note manually,
     these actions will not be ran, and can result in unwanted changes to your note!

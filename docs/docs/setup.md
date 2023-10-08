@@ -39,6 +39,16 @@ There are three ways of installing the note:
 1. Via **JPMN Manager**, a small Anki add-on that can install and update jp-mining-note,
     as well as notify you when updates are available.
     *If you don't know which method to choose, choose this one*.
+
+!!! Note
+
+    On this temporary bugfix fork of JPMN, you **cannot use JPMN Manager to
+    install the note.** This functionality will return when Aquafina resumes
+    maintenance of JPMN. See
+    [here](faq.md#why-cant-i-use-jpmn-manager-on-this-temporary-bugfix-fork)
+    for more details.
+
+
 2. Via **command line**.
     This method is recommended for people who are familiar with `git` and `python`,
     and don't want to download another Anki add-on.
@@ -50,6 +60,11 @@ There are three ways of installing the note:
 
 ??? info "Option 1: JPMN Manager <small>(click here)</small>"
 
+    As noted above, on this temporary bugfix fork of JPMN, you cannot use
+    Option 1. Please use Option 2, or Option 3 if you definitely know what
+    you're doing.
+
+<!--
     1.  To install any Anki add-on, navigate to:
 
         > (Main Window) →  `Tools` →  `Add-ons` →  `Get Add-ons...`
@@ -74,15 +89,18 @@ There are three ways of installing the note:
 
     ![type:video](assets/setup/jpmn_manager-0.12.0.0-prerelease-3.mp4)
 
+
+    -->
+
 ??? info "Option 2: Command Line <small>(click here)</small>"
 
     === "Windows"
 
         ```bat
-        git clone "https://github.com/Aquafina-water-bottle/jp-mining-note.git"
+        git clone "https://github.com/arbyste/jp-mining-note.git"
         :: TODO change this to master branch
-        git checkout testing
         cd jp-mining-note
+        git checkout dev
 
         :: Ensure you have Anki open, and with Anki-Connect running
         :: Also ensure that you have python 3.9+ installed.
@@ -93,10 +111,10 @@ There are three ways of installing the note:
     === "macOS & Linux"
 
         ```bash
-        git clone "https://github.com/Aquafina-water-bottle/jp-mining-note.git"
+        git clone "https://github.com/arbyste/jp-mining-note.git"
         :: TODO change this to master branch
-        git checkout testing
         cd jp-mining-note
+        git checkout dev
 
         # Ensure you have Anki open, and with Anki-Connect running
         # Also ensure that you have python 3.9+ installed.
@@ -113,7 +131,7 @@ There are three ways of installing the note:
 
 
     1. Go to the
-        [releases page](https://github.com/Aquafina-water-bottle/jp-mining-note/releases)
+        [releases page](https://github.com/arbyste/jp-mining-note/releases)
         and download the cards from the latest release.
         You should download the `{version}-jpmn_example_cards.apkg` file.
     2. After you download the cards, import them by navigating to Anki by doing the following:
@@ -122,7 +140,7 @@ There are three ways of installing the note:
 
     3. By default, the custom fonts do not come with the `.apkg` file.
         To install these fonts, head over to this repository's
-        [media folder](https://github.com/Aquafina-water-bottle/jp-mining-note/tree/master/media)
+        [media folder](https://github.com/arbyste/jp-mining-note/tree/master/media)
         and download the 4 `.otf` files.
     4. Move the `.otf` files into the [media folder](faq.md#where-is-the-x-folder-in-anki){:target="_blank"}
         of your profile (`Anki2/PROFILENAME/collections.media`).

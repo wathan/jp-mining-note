@@ -50,7 +50,7 @@ First, you must clone the repository onto your drive.
 
 ```bash
 # on fresh installs
-git clone https://github.com/Aquafina-water-bottle/jp-mining-note.git
+git clone https://github.com/arbyste/jp-mining-note.git
 cd jp-mining-note
 
 # alternatively, if you already have the repository on your system:

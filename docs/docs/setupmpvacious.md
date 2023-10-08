@@ -104,7 +104,7 @@ in order for mpvacious to work with JPMN.
     ```bash
     mkdir -p ~/.config/mpv/script-opts
     # TODO change this to the master branch eventually
-    curl https://raw.githubusercontent.com/Aquafina-water-bottle/jp-mining-note/dev/docs/docs/assets/setupmpvacious/subs2srs.conf > ~/.config/mpv/script-opts/subs2srs.conf
+    curl https://raw.githubusercontent.com/arbyste/jp-mining-note/dev/docs/docs/assets/setupmpvacious/subs2srs.conf > ~/.config/mpv/script-opts/subs2srs.conf
     ```
 
 Be sure to restart mpv after changing the config to make sure your configuration is applied.

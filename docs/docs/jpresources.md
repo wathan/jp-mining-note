@@ -9,7 +9,7 @@ I highly recommend checking it out!
 
 If you encounter any problems, have any questions, etc., feel free to contact
 me on discord `aquafina_water_bottle`,
-or [submit an issue](https://github.com/Aquafina-water-bottle/jp-mining-note/issues).
+or [submit an issue](https://github.com/arbyste/jp-mining-note/issues).
 I exist on the [TheMoeWay]({{THEMOEWAY_LINK}}) and Refold (Japanese) servers.
 
 
@@ -672,11 +672,11 @@ Example template code can be found here:
     - This has certain extended capabilities over my template code, such as removing the first line.
 
 - Template code for this note:
-    [here](https://github.com/Aquafina-water-bottle/jp-mining-note/blob/master/yomichan_templates/top.txt) and
-    [here](https://github.com/Aquafina-water-bottle/jp-mining-note/blob/master/yomichan_templates/bottom.txt)
+    [here](https://github.com/arbyste/jp-mining-note/blob/master/yomichan_templates/top.txt) and
+    [here](https://github.com/arbyste/jp-mining-note/blob/master/yomichan_templates/bottom.txt)
 
 - Old template code for this note (NO LONGER USED / MAINTAINED):
-    [here](https://github.com/Aquafina-water-bottle/jp-mining-note/blob/master/yomichan_templates/old.txt)
+    [here](https://github.com/arbyste/jp-mining-note/blob/master/yomichan_templates/old.txt)
 
 
 

@@ -68,7 +68,7 @@ The `hotkey.py` file can be downloaded in any of the following ways:
 ??? info "Option 2: With `git` {{CLICKHERE}}"
     For `git` users, simply clone the JPMN repository in somewhere you'll remember:
     ```
-    git clone https://github.com/Aquafina-water-bottle/jp-mining-note.git
+    git clone https://github.com/arbyste/jp-mining-note.git
     ```
     The hotkey.py file will be found under `(repo root)/tools/hotkey.py`.
     <!-- extra paragraph required due to mkdocs-video for some reason -->
@@ -79,7 +79,7 @@ The `hotkey.py` file can be downloaded in any of the following ways:
 
     - Navigate to a folder you'll remember.
     - Right click on some blank space, and then create a new text file (`New` -> `Text Document`). Name this text file `hotkey.py`.
-    - [Copy the script text](https://raw.githubusercontent.com/Aquafina-water-bottle/jp-mining-note/dev/tools/hotkey.py) into the new text file, and save (`Ctrl+S`).
+    - [Copy the script text](https://raw.githubusercontent.com/arbyste/jp-mining-note/dev/tools/hotkey.py) into the new text file, and save (`Ctrl+S`).
     TODO gif!
 
 
