@@ -17,8 +17,8 @@ hide:
     Version `0.12.0.0-prerelease-13` has been released alongside this fork. It resolves
     a bug that was introduced by a recent AJTJapanese update, which resulted in
     an `Unexpected flattened.childNode` error and prevented pitch accent information
-    from being displayed correctly. [Click here](updating.md) for instructions
-    on updating.
+    from being displayed correctly. Note that some [user actions](setupchanges.md#v0-12-0-0-prerelease-13)
+    are required after this update. [Click here](updating.md) for instructions on updating.
 
     When Aquafina returns and resumes maintenance of the main project, I will close
     down this fork. The documentation for the original project can be found [here](https://aquafina-water-bottle.github.io/jp-mining-note-prerelease/).
