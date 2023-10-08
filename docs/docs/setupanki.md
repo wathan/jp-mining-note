@@ -384,6 +384,7 @@ An example config is shown below that you can copy/paste.
     * `pitch_accent.reading_separator`
     * `pitch_accent.word_separator`
     * `pitch_accent.maximum_results`
+    * `pitch_accent.style`
 
     ```json
     {
