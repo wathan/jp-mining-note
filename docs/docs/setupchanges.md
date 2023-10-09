@@ -16,7 +16,7 @@ please check here first! If you can't find any solution,
 This version of jp-mining-note fixes a bug that was introduced with a recent
 AJT Japanese update. This bug resulted in an `Unexpected flattened.childNode`
 error on new cards, and prevented pitch accent information from being displayed
-correctly. See the [Updating](updating.md#overview) page on how to update the note.
+correctly. See the [Updating](updating.md) page on how to update the note.
 Afterwards, see below for the other necessary changes that must be made to properly update the note.
 
 
