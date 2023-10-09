@@ -96,7 +96,7 @@ Card creation:
     The mobile interface is still not finalized.
 
 ## Get Started
-See the documentation and setup procedure [**here**](https://aquafina-water-bottle.github.io/jp-mining-note/).
+See the documentation and setup procedure [**here**](https://arbyste.github.io/jp-mining-note-prerelease/).
 
 ## Other Info
 Tested on Anki 2.1.61 (Qt6), Linux (Ubuntu) & Windows.

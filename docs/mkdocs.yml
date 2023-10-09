@@ -4,7 +4,7 @@
 site_name: jp-mining-note
 site_description: Documentation for the jp-mining-note project.
 
-repo_url: https://github.com/arbyste/jp-mining-note
+repo_url: https://github.com/arbyste/jp-mining-note/tree/dev
 repo_name: jp-mining-note
 #edit_uri: edit/master/docs/docs/
 edit_uri: edit/dev/docs/docs/
