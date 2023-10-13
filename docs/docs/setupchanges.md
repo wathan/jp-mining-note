@@ -27,6 +27,11 @@ to the [AJT Japanese setup instructions](setupanki.md#ajt-japanese) and follow
 the instructions. The main changes are the removal of the `"styles"` key, and the
 addition of the `"style"` key under the `"pitch_accent"` settings.
 
+!!! Note
+
+    After updating the AJT Japanese config, make sure you restart Anki. Do this
+    **before** moving on to the next step.
+
 ## Regenerating the AJTWordPitch field { #v0-12-0-0-prerelease-13-ajt-regen }
 
 After updating your AJT Japanese config settings, you will need to regenerate
@@ -64,6 +69,11 @@ After changing everything, don't forget to [test that the card works!](updatingf
 If you reached this point, then congratulations! You are finally done with updating the note!
 Pitch accent and pronunciation data should now be displayed correctly on all
 cards.
+
+If your cards still don't display properly, then it's possible you forgot to
+restart Anki after updating the AJT Japanese configuration. Restart Anki to
+confirm the config change, and then go back and [regenerate the AJTWordPitch field](#v0-12-0-0-prerelease-13-ajt-regen)
+again.
 
 
 ---
