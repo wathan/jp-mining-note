@@ -92,14 +92,15 @@ Afterward seeing that page, please view the [final steps](updating.md#final-step
         ::  $ git clone https://github.com/arbyste/jp-mining-note.git
         ::  $ cd jp-mining-note
 
-        :: grabs the latest version of the master branch
-        :: NOTE: use the `dev` branch if you want to install pre-releases, i.e.
-        ::git checkout dev
+        :: Since we are using the prerelease version, make sure you switch
+        :: to the dev branch
+        git checkout dev
+        :: grabs the latest version of the dev branch
         git pull --force
 
         :: Make sure you have Anki open and Anki-Connect installed!
         :: Also ensure that your python version is 3.9 or higher.
-        python tools\install.py
+        python tools\install.py --update
         ```
 
 
@@ -109,14 +110,15 @@ Afterward seeing that page, please view the [final steps](updating.md#final-step
         #  $ git clone https://github.com/arbyste/jp-mining-note.git
         #  $ cd jp-mining-note
 
-        # grabs the latest version of the master branch
-        # NOTE: use the `dev` branch if you want to install pre-releases, i.e.
-        #git checkout dev
+        # Since we are using the prerelease version, make sure you switch
+        # to the dev branch
+        git checkout dev
+        # grabs the latest version of the dev branch
         git pull --force
 
         # Make sure you have Anki open and Anki-Connect installed!
         # Also ensure that your python version is 3.9 or higher.
-        python3 tools/install.py
+        python3 tools/install.py --update
         ```
 
 {% filter indent(4) %}
