@@ -40,13 +40,13 @@ There are three ways of installing the note:
     as well as notify you when updates are available.
     *If you don't know which method to choose, choose this one*.
 
-!!! Note
+    !!! Note
 
-    On this temporary bugfix fork of JPMN, you **cannot use JPMN Manager to
-    install the note.** This functionality will return when Aquafina resumes
-    maintenance of JPMN. See
-    [here](faq.md#why-cant-i-use-jpmn-manager-on-this-temporary-bugfix-fork)
-    for more details.
+        On this temporary bugfix fork of JPMN, you **cannot use JPMN Manager to
+        install the note.** This functionality will return when Aquafina resumes
+        maintenance of JPMN. See
+        [here](faq.md#why-cant-i-use-jpmn-manager-on-this-temporary-bugfix-fork)
+        for more details.
 
 
 2. Via **command line**.

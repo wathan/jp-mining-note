@@ -66,7 +66,7 @@ I'm not aware of a workflow for iOS that works with Yomichan.
 
 ## Anki Desktop
 This note supports Anki versions 2.1.50 and above, with
-primary support given to the latest stable Anki versions (2.1.61+ & Qt6).
+primary support given to the latest stable Anki versions (23.10.1+ & Qt6).
 
 It is important to note that **this note is no longer supported for Anki versions 2.1.49 or older**.
 There are certain features that are known to break on these versions.
