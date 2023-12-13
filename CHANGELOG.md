@@ -173,6 +173,18 @@ and must use `./install.py --update`.
 #### 0.12.0.0 Pre-release Changelog
 
 <details>
+<summary> Pre-release 14 </summary>
+
+- **Fixes**
+    - Fixed a bug that prevented images mined from Yomitan from being displayed correctly
+    - Updated Handlebars so that they would work with Yomitan
+
+</details>
+
+
+
+
+<details>
 <summary> Pre-release 13 </summary>
 
 - **Fixes**
