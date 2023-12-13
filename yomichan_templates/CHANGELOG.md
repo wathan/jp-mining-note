@@ -10,6 +10,9 @@ Public facing markers are markers starting with `jpmn` (whereas private markers 
 
 The Yomichan template version is incremented independently from the jp-mining-note version.
 
+## v1.0.11
+- Updated the Handlebars to work with the first stable release of Yomitan
+
 ## v1.0.10
 - Ignore more of stephenmk's jitenbot dictionaries for first line grabbing. If this pattern continues, consider changing `opt-first-line-regex-mode` to `only`, and whitelisting dictionaries instead of blacklisting dictionaries.
 

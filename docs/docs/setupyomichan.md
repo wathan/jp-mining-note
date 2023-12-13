@@ -1,33 +1,19 @@
 # Overview
 
-[Yomichan](https://github.com/FooSoft/yomichan)
-is the main program that will create the cards. You can download Yomichan as a
-[Firefox extension](https://github.com/FooSoft/yomichan/releases/download/22.10.23.0/a708116f79104891acbd-22.10.23.0.xpi)
+[Yomitan](https://github.com/themoeway/yomitan)
+is the main program that will create the cards. You can download Yomitan as a
+[Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/yomitan/)
 or under the
-[Chrome web store](https://chrome.google.com/webstore/detail/yomichan/ogmnaimimemjmbakcfefmnahgdfhfami).
+[Chrome web store](https://chromewebstore.google.com/detail/yomitan/likgccmbimhjbgkjambclfkhldnlhbnn).
 
-This section will go over the minimal Yomichan setup to work with this card type.
+This section will go over the minimal Yomitan setup to work with this card type.
 
-**If you have never used Yomichan before, please see
+**If you have never used Yomitan before, please see
 [this page](https://learnjapanese.moe/yomichan/) first to get it working.**
 
 
-!!! warning "Warning for Firefox Users"
-    The default version for Yomichan on Firefox's Add-ons page
-    is [over three years old](https://github.com/FooSoft/yomichan/issues/2295),
-    and is not compatible with this note.
-    If you are using Firefox, ensure that your Yomichan version is indeed the latest version,
-    by clicking on the Yomichan icon and clicking on the question mark.
-
-    If it isn't, you will have to download it
-    [manually](https://github.com/FooSoft/yomichan/releases/tag/22.10.23.0)
-    (use `a708116f79104891acbd-22.10.23.0.xpi`).
-
-
----
-
 # Preliminary Steps
-*   If you have used Yomichan before, please make a
+*   If you have used Yomitan before, please make a
     [backup of your settings](faq.md#how-do-i-backup-yomichan-settings)
     (just in case).
 
@@ -35,7 +21,7 @@ This section will go over the minimal Yomichan setup to work with this card type
     pitch accent dictionaries, as that information is used by jp-mining-note.
     Many of these dictionaries can be found within
     [TheMoeWay's drive](https://learnjapanese.link/dictionaries).
-    These dictionaries are installed in the exact same way as the standard Yomichan dictionaries.
+    These dictionaries are installed in the exact same way as the standard Yomitan dictionaries.
 
     In particular, I recommend the [**JPDB frequency list**](https://github.com/MarvNC/jpdb-freq-list).
 
@@ -43,11 +29,11 @@ This section will go over the minimal Yomichan setup to work with this card type
 
 
 # Yomichan Fields
-To edit the fields that Yomichan will automatically fill out, do the following:
+To edit the fields that Yomitan will automatically fill out, do the following:
 
 ![type:video](assets/setupyomichan/yomichan_anki_format.mp4)
 
-1. Navigate to Yomichan Settings.
+1. Navigate to Yomitan Settings.
 1. Go to the `Anki` section.
 1. Select `Anki card format...`.
 1. Set "Model" as `JP Mining Note`, and "Deck" to whatever your Anki deck is.
@@ -76,7 +62,7 @@ with all other definitions in collapsable fields.
     See the [Changing Card Type](changingcardtype.md) page for more info.
 
 
-The custom helpers like `{jpmn-primary-definition}` is not provided by Yomichan by default.
+The custom helpers like `{jpmn-primary-definition}` is not provided by Yomitan by default.
 See the section below to make these helpers usable.
 
 ---
@@ -84,7 +70,7 @@ See the section below to make these helpers usable.
 
 
 # Yomichan Templates
-Yomichan supports user inserted template code that allows the automatic
+Yomitan supports user inserted template code that allows the automatic
 separation of bilingual and monolingual dictionary definitions, custom stylization, etc.
 This note type makes heavy use of these custom templates.
 
@@ -92,7 +78,7 @@ To make the new helpers usable, do the following:
 
 ![type:video](assets/setupyomichan/import_yomichan_templates.mp4)
 
-1. Navigate to Yomichan Settings.
+1. Navigate to Yomitan Settings.
 1. Make sure that advanced settings are turned on (bottom left corner).
 1. Go to the `Anki` section
 1. Select `Configure Anki card templates...`
@@ -104,7 +90,7 @@ After resetting the templates,
 **without** removing any of the existing template code,
 add the following template code as follows:
 
-1. Copy and paste the code below to the **top** of the default Yomichan template code:
+1. Copy and paste the code below to the **top** of the default Yomitan template code:
 
     ??? examplecode "Click here to show the template code to copy."
 
@@ -114,7 +100,7 @@ add the following template code as follows:
         {% endfilter %}
         ```
 
-2. Copy and paste the code below to the **bottom** of the default Yomichan template code:
+2. Copy and paste the code below to the **bottom** of the default Yomitan template code:
 
     ??? examplecode "Click here to show the template code to copy."
 
@@ -129,7 +115,7 @@ add the following template code as follows:
 # Make an example card!
 TODO re-record with renji's texthooker, and show result card
 
-At this point, you should be able to make cards with Yomichan!
+At this point, you should be able to make cards with Yomitan!
 
 ??? example "Click here to show some example Japanese sentences."
 
@@ -145,12 +131,12 @@ At this point, you should be able to make cards with Yomichan!
     「浮動小数点数は、IEEE-754規格に従って表現されています。`f32`が単精度浮動小数点数、 `f64`が倍精度浮動小数点数です」
     { .jp-quote-text }
 
-{{ img("adding a card with Yomichan", "assets/setupyomichan/add_card.gif") }}
+{{ img("adding a card with Yomitan", "assets/setupyomichan/add_card.gif") }}
 
-Obviously, just Yomichan alone doesn't fill every field.
+Obviously, just Yomitan alone doesn't fill every field.
 Notably, the picture and sentence audio is missing.
 
-Outside of that, there are some final settings you can adjust within the Yomichan templates
+Outside of that, there are some final settings you can adjust within the Yomitan templates
 if the card doesn't look quite right.
 
 
@@ -244,9 +230,9 @@ To fix it, set `opt-jmdict-list-format` to `true`, i.e.
 # Enjoy your new one-click cards!
 
 If you've made it this far, then congratulations!
-Most fields of the cards have been automatically filled out, just from Yomichan alone!
+Most fields of the cards have been automatically filled out, just from Yomitan alone!
 
-This concludes the minimal setup process for creating cards with Yomichan.
+This concludes the minimal setup process for creating cards with Yomitan.
 
 From here, you likely fall under one of the two categories below:
 
@@ -256,7 +242,7 @@ From here, you likely fall under one of the two categories below:
     If you're new to sentence mining, there are likely some things things
     that you would like to set up. These include:
 
-    1. Getting the actual text to use Yomichan on.
+    1. Getting the actual text to use Yomitan on.
     1. Getting the pictures and/or sentence audio from the media into the card.
 
     Head over to the [Setup: Text & Media](setuptextmedia.md) page to see exactly that.
