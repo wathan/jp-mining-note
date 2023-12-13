@@ -420,29 +420,34 @@ class BackImgStylizer extends Module {
     return defSpan;
   }
 
-  // force data-jpmn-processed for all yomichan images, i.e. do not process it any further
+  // force data-jpmn-processed for all yomitan images, i.e. do not process it any further
+  // Keeping a check for 'yomichan' to maintain backwards compatibility with older cards
+  // mined using yomichan
   private setImgProcessed(ele: HTMLElement) {
     const imgTags = Array.from(ele.getElementsByTagName('img'));
     for (const imgEle of imgTags) {
-      if (imgEle.src.includes('yomichan_dictionary_media')) {
+      if (imgEle.src.includes('yomichan_dictionary_media') ||
+         imgEle.src.includes('yomitan_dictionary_media')) {
         imgEle.setAttribute('data-jpmn-processed', 'true');
       }
     }
   }
 
-  // ASSUMPTION: after running this, all yomichan img tags elements will be one of the following:
+  // ASSUMPTION: after running this, all yomitan img tags elements will be one of the following:
   // - contain the `data-jpmn-processed` attribute
   // - moved away from the search element, and into the float div
   private convertYomichanImgs(searchEle: HTMLElement, mode: StylizeType) {
     const anchorTags = searchEle.getElementsByTagName('a');
     for (const atag of Array.from(anchorTags)) {
       const imgFileName = atag.getAttribute('href');
+      // Keeping a check for yomichan to maintain backwards compatibility for cards mined with yomichan
       if (
         imgFileName &&
-        imgFileName.substring(0, 25) === 'yomichan_dictionary_media' &&
+        (imgFileName.substring(0, 25) === 'yomichan_dictionary_media' ||
+        imgFileName.substring(0, 24) === 'yomitan_dictionary_media' ) &&
         !atag.getAttribute('data-jpmn-processed') // not processed yet
       ) {
-        this.logger.debug(`Converting yomichan image ${imgFileName} (mode=${mode})...`);
+        this.logger.debug(`Converting yomitan image ${imgFileName} (mode=${mode})...`);
 
         if (mode === 'float') {
           const imgEle = document.createElement('img');
