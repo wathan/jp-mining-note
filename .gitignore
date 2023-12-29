@@ -387,3 +387,4 @@ overrides/*
 !overrides/.gitkeep
 
 themes/parfait/
+.DS_Store
