@@ -10,6 +10,9 @@ Public facing markers are markers starting with `jpmn` (whereas private markers 
 
 The Yomichan template version is incremented independently from the jp-mining-note version.
 
+## v1.1.11
+- Added `jpmn-tags` which includes Jitendex tags embeded in the glossary's data distributes
+
 ## v1.0.11
 - Updated the Handlebars to work with the first stable release of Yomitan
 
